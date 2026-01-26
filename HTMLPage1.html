@@ -1,0 +1,328 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wildflower Dust</title>
+    <meta name="description" content="Wildflower Dust — articles, audio, and video." />
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        header {
+            padding: 24px 16px;
+            border-bottom: 1px solid rgba(127,127,127,.25);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,.7);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            header {
+                background: rgba(0,0,0,.5);
+            }
+        }
+
+        .wrap {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo {
+            width: 34px;
+            height: 34px;
+            border-radius: 12px;
+            border: 1px solid rgba(127,127,127,.35);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+        }
+
+        nav a {
+            margin-left: 14px;
+            text-decoration: none;
+            color: inherit;
+            opacity: .85;
+        }
+
+            nav a:hover {
+                opacity: 1;
+                text-decoration: underline;
+            }
+
+        main {
+            padding: 36px 16px 56px;
+        }
+
+        .hero {
+            display: grid;
+            gap: 18px;
+            padding: 22px;
+            border-radius: 18px;
+            border: 1px solid rgba(127,127,127,.25);
+            background: linear-gradient(135deg, rgba(127,127,127,.12), rgba(127,127,127,.03));
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(28px, 4vw, 44px);
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            margin: 0;
+            max-width: 70ch;
+            opacity: .9;
+        }
+
+        .cta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(127,127,127,.35);
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+        }
+
+            .btn.primary {
+                border-color: transparent;
+                background: rgba(127,127,127,.22);
+            }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .card {
+            grid-column: span 12;
+            padding: 16px;
+            border-radius: 18px;
+            border: 1px solid rgba(127,127,127,.25);
+        }
+
+        @media (min-width: 860px) {
+            .card {
+                grid-column: span 4;
+            }
+        }
+
+        .card h2 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+
+        .card p {
+            margin: 0 0 12px;
+            font-size: 14px;
+            opacity: .85;
+        }
+
+        .meta {
+            font-size: 12px;
+            opacity: .75;
+        }
+
+        .section-title {
+            margin: 34px 0 10px;
+            font-size: 16px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            opacity: .75;
+        }
+
+        .list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .item {
+            padding: 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(127,127,127,.25);
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+            .item a {
+                text-decoration: none;
+                color: inherit;
+                font-weight: 600;
+            }
+
+            .item small {
+                opacity: .75;
+            }
+
+        footer {
+            padding: 28px 16px;
+            border-top: 1px solid rgba(127,127,127,.25);
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            opacity: .85;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap top">
+            <a class="brand" href="#">
+                <div class="logo">WD</div>
+                <strong>Wildflower Dust</strong>
+            </a>
+            <nav aria-label="Primary">
+                <a href="#articles">Articles</a>
+                <a href="#audio">Audio</a>
+                <a href="#video">Video</a>
+                <a href="#shop">Shop</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="hero" aria-label="Hero">
+            <h1>Wildflower Dust</h1>
+            <p>
+                A home for stories, sound, and visuals — a modern garden feed for articles,
+                audio notes, and video drops.
+            </p>
+            <div class="cta">
+                <a class="btn primary" href="#articles">Explore Articles</a>
+                <a class="btn" href="#audio">Listen</a>
+                <a class="btn" href="#shop">Shop</a>
+            </div>
+        </section>
+
+        <h3 class="section-title" id="articles">Latest Articles</h3>
+        <section class="grid" aria-label="Latest Articles">
+            <article class="card">
+                <h2>🌿 Sample Article Title</h2>
+                <p>Short teaser text goes here. Replace this with your newest post summary.</p>
+                <div class="meta">2 min read • Category</div>
+            </article>
+            <article class="card">
+                <h2>🕯️ Sample Article Title</h2>
+                <p>Short teaser text goes here. Replace this with your newest post summary.</p>
+                <div class="meta">4 min read • Category</div>
+            </article>
+            <article class="card">
+                <h2>✨ Sample Article Title</h2>
+                <p>Short teaser text goes here. Replace this with your newest post summary.</p>
+                <div class="meta">6 min read • Category</div>
+            </article>
+        </section>
+
+        <h3 class="section-title" id="audio">Audio</h3>
+        <section class="list" aria-label="Audio list">
+            <div class="item">
+                <div>
+                    <a href="#">Audio Episode #1 — Title</a><br />
+                    <small>10:24 • Notes / Story / Diary</small>
+                </div>
+                <button class="btn" type="button" onclick="alert('Hook this up to your audio player later!')">Play</button>
+            </div>
+            <div class="item">
+                <div>
+                    <a href="#">Audio Episode #2 — Title</a><br />
+                    <small>07:58 • Notes / Story / Diary</small>
+                </div>
+                <button class="btn" type="button" onclick="alert('Hook this up to your audio player later!')">Play</button>
+            </div>
+        </section>
+
+        <h3 class="section-title" id="video">Video</h3>
+        <section class="list" aria-label="Video list">
+            <div class="item">
+                <div>
+                    <a href="#">Video Drop #1 — Title</a><br />
+                    <small>00:45 • Short clip</small>
+                </div>
+                <a class="btn" href="#">Watch</a>
+            </div>
+            <div class="item">
+                <div>
+                    <a href="#">Video Drop #2 — Title</a><br />
+                    <small>01:20 • Short clip</small>
+                </div>
+                <a class="btn" href="#">Watch</a>
+            </div>
+        </section>
+
+        <h3 class="section-title" id="shop">Shop</h3>
+        <section class="list" aria-label="Shop">
+            <div class="item">
+                <div>
+                    <a href="#">Artwork Prints</a><br />
+                    <small>Link to your Etsy (or your store) later.</small>
+                </div>
+                <a class="btn primary" href="#">Open Shop</a>
+            </div>
+            <div class="item">
+                <div>
+                    <a href="#">Books & Zines</a><br />
+                    <small>Digital + physical releases.</small>
+                </div>
+                <a class="btn" href="#">Browse</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-row">
+            <div>© <span id="year"></span> Wildflower Dust</div>
+            <div>
+                <a href="#" style="color:inherit; text-decoration:none; opacity:.85;">Privacy</a>
+                <span style="opacity:.5;"> • </span>
+                <a href="#" style="color:inherit; text-decoration:none; opacity:.85;">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
