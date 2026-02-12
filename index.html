@@ -4,15 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wildflower Dust</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Title font + clean UI font -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Decorative plant layers -->
+  <!-- Plant frame layers (using your photos w/ masks & blend) -->
   <div class="plant plant--tl" aria-hidden="true"></div>
   <div class="plant plant--tr" aria-hidden="true"></div>
   <div class="plant plant--bl" aria-hidden="true"></div>
@@ -29,16 +30,14 @@
         <a class="nav__link" href="#">Articles</a>
         <a class="nav__link" href="#">Podcasts</a>
         <a class="nav__link" href="#">Videos</a>
-        <button class="nav__icon" aria-label="Search">
-          🔍
-        </button>
+        <button class="nav__icon" aria-label="Search">🔍</button>
       </nav>
 
       <div class="hero__divider"></div>
     </header>
 
     <main class="grid">
-      <!-- Row 1 -->
+      <!-- Featured -->
       <section class="panel panel--featured">
         <div class="panel__top">
           <h2 class="panel__title">Featured Article</h2>
@@ -46,21 +45,19 @@
         </div>
 
         <article class="card card--hero">
-          <div class="card__media" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');">
+          <div class="card__media" style="background-image:url('./assets/featured.jpg');">
             <div class="card__mediaGlow" aria-hidden="true"></div>
           </div>
 
           <div class="card__body">
             <h3 class="card__headline">Life in the VIP</h3>
-            <p class="card__sub">
-              An exclusive look into the lifestyle of the elite
-            </p>
-
+            <p class="card__sub">An exclusive look into the lifestyle of the elite</p>
             <a class="btn" href="#">Read More</a>
           </div>
         </article>
       </section>
 
+      <!-- Podcast -->
       <section class="panel panel--pod">
         <div class="panel__top">
           <h2 class="panel__title">Latest Podcast Episode</h2>
@@ -68,12 +65,14 @@
         </div>
 
         <div class="card card--player">
+          <div class="podBackdrop" style="background-image:url('./assets/podcast.jpg');" aria-hidden="true"></div>
+
           <div class="player__head">
             <h3 class="player__title">Living Luxe and Lavish</h3>
             <p class="player__meta">Episode 12 • 25:32</p>
           </div>
 
-          <!-- Fake player UI (replace with <audio controls> later) -->
+          <!-- Fake player UI (swap later for <audio controls>) -->
           <div class="player">
             <div class="player__bar">
               <span class="player__dot" aria-hidden="true"></span>
@@ -87,7 +86,7 @@
         </div>
       </section>
 
-      <!-- Row 2 -->
+      <!-- Recent -->
       <section class="panel panel--recent">
         <div class="panel__top panel__top--line">
           <h2 class="panel__title">Recent Articles</h2>
@@ -96,7 +95,7 @@
 
         <div class="cards cards--2">
           <article class="card card--small">
-            <div class="card__thumb" style="background-image:url('https://images.unsplash.com/photo-1518544887879-3f60c30f4c42?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="card__thumb" style="background-image:url('./assets/money.jpg');"></div>
             <div class="card__body">
               <h3 class="card__headline card__headline--sm">Money Moves</h3>
               <p class="card__sub">Bringing the heat in our inbox.</p>
@@ -105,7 +104,7 @@
           </article>
 
           <article class="card card--small">
-            <div class="card__thumb" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="card__thumb" style="background-image:url('./assets/escape.jpg');"></div>
             <div class="card__body">
               <h3 class="card__headline card__headline--sm">Luxury Escapes</h3>
               <p class="card__sub">High life, clean design energy.</p>
@@ -115,6 +114,7 @@
         </div>
       </section>
 
+      <!-- Video -->
       <section class="panel panel--video">
         <div class="panel__top panel__top--line">
           <h2 class="panel__title">Video Highlights</h2>
@@ -122,7 +122,7 @@
         </div>
 
         <article class="card card--videoCard">
-          <div class="videoThumb" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');">
+          <div class="videoThumb" style="background-image:url('./assets/video.jpg');">
             <div class="videoThumb__overlay" aria-hidden="true"></div>
             <div class="videoThumb__play" aria-hidden="true">▶</div>
             <div class="videoThumb__time" aria-hidden="true">8:12</div>
@@ -134,7 +134,7 @@
         </article>
       </section>
 
-      <!-- Footer subscribe (full width) -->
+      <!-- Subscribe -->
       <section class="subscribe">
         <h2 class="subscribe__title">Subscribe for Updates</h2>
         <p class="subscribe__sub">Join our newsletter for the latest stories from the garden.</p>
@@ -148,7 +148,7 @@
       </section>
     </main>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
